@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Kata20170809_BitCounting
@@ -10,6 +12,12 @@ namespace Kata20170809_BitCounting
         public void input_0_should_reutrn_0()
         {
             CountBetsShouldBe(0, 0);
+        }
+
+        [TestMethod]
+        public void input_2_should_reutrn_1()
+        {
+            CountBetsShouldBe(1, 2);
         }
 
         private static void CountBetsShouldBe(int expected, int number)
@@ -24,7 +32,7 @@ namespace Kata20170809_BitCounting
     {
         public int CountBits(int n)
         {
-            return 0;
+            return Convert.ToString(n, 2).ToCharArray().Count(a => a == '1');
         }
     }
 }
