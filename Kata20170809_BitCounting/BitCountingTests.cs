@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Kata20170809_BitCounting
 {
     [TestClass]
-    public class UnitTest1
+    public class BitCountingTests
     {
         [TestMethod]
         public void TestMethod1()
